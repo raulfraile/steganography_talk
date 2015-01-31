@@ -1,6 +1,6 @@
 # Steganography talk extra materials
 
-In this repository you can find examples and demos used in my talk about [Steganography](en.wikipedia.org/wiki/Steganography).
+In this repository you can find examples and demos used in my talk about [Steganography](http://en.wikipedia.org/wiki/Steganography).
 
 ## Examples
 
