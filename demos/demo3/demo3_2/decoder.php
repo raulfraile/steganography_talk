@@ -16,9 +16,7 @@ if (preg_match('/\s+$/', $outputFileContents, $matches)) {
     );
 
     $morse = new Morse();
-    //$morse->synthesize($originalMorse);
+    $morse->synthesize($originalMorse);
     //$morse->synthesize($originalMorse, 'la', 'leeeeeeeeeeeeeee');
-    exec('say -v "Bad News" "PHP 6 will never see the sunshine"');
 }
 
-INT

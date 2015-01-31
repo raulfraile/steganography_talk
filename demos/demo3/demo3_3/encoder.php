@@ -2,11 +2,8 @@
 
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
-$originalFile = __DIR__ . '/original.php';
-$hiddenFile = __DIR__ . '/fibonacci.ws';
-
-$originalFileContents = file_get_contents($originalFile);
-$hiddenFileContents = file_get_contents($hiddenFile);
+$originalFileContents = file_get_contents($argv[1]);
+$hiddenFileContents = file_get_contents($argv[2]);
 
 // cleanup trailing whitespaces
 $originalFileContents = preg_replace('/\s*$/', '', $originalFileContents);

@@ -87,9 +87,6 @@ class EmbedNodeVisitor extends BaseNodeVisitor
 
 }
 
-$originalFile = __DIR__ . '/original.php';
-$hiddenFile = __DIR__ . '/hello_world.ws';
-
 $parser = new PhpParser\Parser(new PhpParser\Lexer\Emulative);
 $traverser = new PhpParser\NodeTraverser;
 $prettyPrinter = new PhpParser\PrettyPrinter\Standard;
@@ -97,8 +94,8 @@ $prettyPrinter = new PhpParser\PrettyPrinter\Standard;
 $statsVisitor = new StatsNodeVisitor();
 $traverser->addVisitor($statsVisitor);
 
-$originalFileContents = file_get_contents($originalFile);
-$hiddenFileContents = file_get_contents($hiddenFile);
+$originalFileContents = file_get_contents($argv[1]);
+$hiddenFileContents = file_get_contents($argv[2]);
 
 try {
     $stmts = $parser->parse($originalFileContents);
